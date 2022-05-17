@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommensteuer-Rechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <section class="rechnerContainer" onsubmit="return false">
+            <form action="">
+                <div>
+                    <h1>Einkommensteuerrechner</h1>
+                </div>
+                <div>
+                    <h2>Jahr:</h2>
+                </div>
+                <div>
+                    <select name="year" id="year" value='2021'>
+                        <option value=" 2021" selected="'selected">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </div>
+                <div>
+                    <h2>zu versteuerndes Einkommen:</h2>
+                </div>
+                <div>
+                    <input type="text" id="input-income">
+                    <label for="">Euro</label>
+                    <!-- <p>Euro</p> -->
+                </div>
+                <div>
+                    <h2>Art der Veranlagung:</h2>
+                </div>
+                <div>
+                    <section>
+                        <input type="radio" name="single-double" id="single" checked>
+                        <label for="single-double">Einzelveranlagung</label>
+                    </section>
+                    <!-- <p>Einzelveranlagung</p> -->
+                    <section>
+                        <input type="radio" name="single-double" id="double">
+                        <label for="single-double">Zusammenveranlagung</label>
+                    </section>
+                    <!-- <p>Zusammenveranlagung</p> -->
+                </div>
+                <button onclick="calculate()">Berechnen!</button>
+                <div class="output">
+                    <h2>Zu versteuerndes Einkommen: <span id="zve-output"></span></h2>
+                    <h2>Einkommensteuer: <span id="tax-output"></span></h2>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
